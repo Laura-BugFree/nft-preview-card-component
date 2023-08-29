@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    /* colours */
+    --main-bg-clr: hsl(217, 54%, 11%);
+    --card-bg-clr: hsl(216, 50%, 16%);
+    --line-clr: hsl(215, 32%, 27%);
+    --text-primary-clr: hsl(215, 51%, 70%);
+    --text-secondary-clr: hsl(0, 0%, 100%);
+    --accent-clr: hsl(178, 100%, 50%);
+    --hover-clr: hsla(178, 100%, 50%, .5);
+    --shadow-clr: hsla(0, 0%, 0%,.1);
+
+
+    /* font */
+    --ff-body: 'Outfit', sans-serif;
+    --fs-body: 1.125rem;
+    --fs-ttl: 1.35rem;
+    --fw-lgt: 300;
+    --fw-norm: 400;
+    --fw-bold: 600;
+
+    
+}
+
+body {
+    background-color: var(--main-bg-clr);
+    color: var(--text-primary-clr);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-lgt);
+    line-height: 1.6; 
+    height: 100vh;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* ============
+    Typography 
+   ============ */
+.card-title a,
+.user {
+    color: var(--text-secondary-clr);
+}
+
+.card-title {
+    font-size: var(--fs-ttl);
+    margin-bottom: .5em;  
+}
+
+.card-title a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.card-title a:hover,
+.card-title a:focus {
+    color: var(--accent-clr);
+}
+
+.cost {
+    color: var(--accent-clr);
+    font-weight: var(--fw-bold);
+}
+
+.user {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.user:hover,
+.user:focus {
+    color: var(--accent-clr);
+}
+
+
+.card {
+    background-color: var(--card-bg-clr);
+    box-shadow: 0 30px 15px 15px var(--shadow-clr);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 375px;
+    margin: 3em auto;
+}
+
+.card-content {
+    width: 85%; 
+    display: flex;   
+    flex-direction: column;
+    margin: 1.5em auto;
+}
+
+.card-cost,
+.card-user {
+    display: flex;
+    align-items: center;
+}
+
+.card-cost,
+.img-container,
+.card-text {
+    margin-bottom: 1em;
+}
+
+.card-cost {
+    border-bottom: 1px solid var(--line-clr);    
+    padding-bottom: 1em;    
+}
+
+.icon-eth,
+.clock-icon {
+    margin-right: .5em;
+}
+
+.clock-icon {
+    margin-left: auto;
+}
+
+.img-container,
+.avatar-img {
+    display: block;
+    order: -1;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    border-radius: 10px; 
+}
+
+.img-container{
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px; 
+}
+
+.overlay {
+    background-color: var(--hover-clr);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.overlay:hover,
+.overlay:focus {
+    opacity: 1;
+}
+
+.avatar-img {
+    width: 12%;
+    border: 1px solid var(--text-secondary-clr);
+    border-radius: 100vw;    
+    margin-right: 1em;
+}
+
+.attribution { 
+    color: var(--text-secondary-clr);
+    font-size: 11px; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.attribution a {
+    color: var(--text-primary-clr);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: var(--accent-clr);
+    text-decoration: underline;
+}
